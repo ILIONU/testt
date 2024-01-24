@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목걸이 판매 홈페이지</title>
+
+    <!-- 부트스트랩 CDN 링크 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CDN 링크 (아이콘 사용을 위해) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style>
+        /* 마우스 오버 시 이미지 확대 효과 */
+        .card-img-top {
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand mx-auto" href="#">목걸이 판매 사이트</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">제품</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">주문하기</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">고객센터</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 콘텐츠 -->
+    <div class="container mt-4">
+        <h1>인기 목걸이 제품</h1>
+
+        <!-- 제품 카드 예시 -->
+        <div class="card-deck mt-4">
+            <div class="card">
+                <img src="data:image/jpeg;base64,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" class="card-img-top" alt="목걸이 이미지">
+                <div class="card-body">
+                    <h5 class="card-title">예시 목걸이 1</h5>
+                    <p class="card-text">이 목걸이는 아주 멋져요!</p>
+                    <p class="card-text"><small class="text-muted">$19.99</small></p>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" id="button-minus1">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control text-center" value="1" id="quantity1" readonly>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" id="button-plus1">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary mt-2">주문하기</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://placekitten.com/300/200" class="card-img-top" alt="목걸이 이미지">
+                <div class="card-body">
+                    <h5 class="card-title">예시 목걸이 2</h5>
+                    <p class="card-text">다양한 스타일을 제공합니다.</p>
+                    <p class="card-text"><small class="text-muted">$24.99</small></p>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" id="button-minus2">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control text-center" value="1" id="quantity2" readonly>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" id="button-plus2">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary mt-2">주문하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 부트스트랩, jQuery, Popper.js, Font Awesome CDN 링크 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+
+    <!-- 수량 버튼 동작 스크립트 -->
+    <script>
+        $(document).ready(function () {
+            // 목걸이 1
+            $("#button-plus1").click(function () {
+                var currentValue = parseInt($("#quantity1").val());
+                $("#quantity1").val(currentValue + 1);
+            });
+
+            $("#button-minus1").click(function () {
+                var currentValue = parseInt($("#quantity1").val());
+                if (currentValue > 1) {
+                    $("#quantity1").val(currentValue - 1);
+                }
+            });
+
+            // 목걸이 2
+            $("#button-plus2").click(function () {
+                var currentValue = parseInt($("#quantity2").val());
+                $("#quantity2").val(currentValue + 1);
+            });
+
+            $("#button-minus2").click(function () {
+                var currentValue = parseInt($("#quantity2").val());
+                if (currentValue > 1) {
+                    $("#quantity2").val(currentValue - 1);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
